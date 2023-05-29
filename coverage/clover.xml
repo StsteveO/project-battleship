@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1685369883086" clover="3.2.0">
-  <project timestamp="1685369883087" name="All files">
+<coverage generated="1685397706733" clover="3.2.0">
+  <project timestamp="1685397706733" name="All files">
     <metrics statements="32" coveredstatements="32" conditionals="28" coveredconditionals="27" methods="7" coveredmethods="7" elements="67" coveredelements="66" complexity="0" loc="32" ncloc="32" packages="1" files="1" classes="1"/>
     <file name="functions.js" path="/home/steveomari62/project-battleship/src/functions _&_tests/functions.js">
       <metrics statements="32" coveredstatements="32" conditionals="28" coveredconditionals="27" methods="7" coveredmethods="7"/>
