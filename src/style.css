@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /* background-color: skyblue; */
+}
+:root {
+  /* --custom name: value; */
+  /* --light-green-bg: #476529; */
+  /* example, color: var(--navy-clr) */
+  --header-clr: rgb(90, 141, 161);
+  --nav-clr: #4C5958;
+  --main-clr: #BFBFBF;
+  --high-pri-clr: #DB2E1A;
+  --med-pri-clr: #D6AB0F;
+  --low-pri-clr: #10A11C;
+  --default-list-clr: #8AA6A3;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 0rem;
+    border: .25rem solid black;
+    background-color: navy;
+    color: silver;
+    margin-bottom: 1rem;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+}
+.form.player-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submit-name-btn{
+  margin-top: 1rem;
+  padding: .5rem;
+}

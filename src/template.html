@@ -7,5 +7,20 @@
     <title><%=htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+    <h1 class="header">BATTLESHIP PROJECT</h1>
+    <div class="form player-name">
+        <form action="" method="post">
+            <div>*= Required</div>
+            <br>
+            <fieldset>
+                <legend>PLAYER</legend>
+                <div>
+                    <label for="first_name">*First name:</label>
+                    <input type="text" name="first_name" id="first_name" required placeholder="Stephen">
+                </div>
+                <button type="submit" id="submit-name-btn" class="submit-name-btn">Start Game</button>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>

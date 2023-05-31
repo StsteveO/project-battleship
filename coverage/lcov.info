@@ -1,4 +1,16 @@
 TN:
+SF:src/DOM-interactions/DOM-interactions.js
+FN:3,exampleAdd
+FNF:1
+FNH:1
+FNDA:1,exampleAdd
+DA:4,1
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
 SF:src/functions _&_tests/functions.js
 FN:1,(anonymous_0)
 FN:4,(anonymous_1)
