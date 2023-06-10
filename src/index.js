@@ -90,6 +90,27 @@ vertical.addEventListener("click", (e) => {
   boatOrientationButtonFunction(vertical);
 });
 
+//click-btns-modal
+const clickBtnsModal= document.querySelector(".click-btns-modal");
+const tableClass= document.querySelector(".table-class");
+
+tableClass.addEventListener("mouseenter", ()=>{
+  if (
+    (!patrolBoat.getAttribute("class").includes("clicked") &&
+    !submarine.getAttribute("class").includes("clicked") &&
+    !destroyer.getAttribute("class").includes("clicked") &&
+    !battleship.getAttribute("class").includes("clicked") &&
+    !carrier.getAttribute("class").includes("clicked")) ||
+    (!horizantal.getAttribute("class").includes("clicked") &&
+    !vertical.getAttribute("class").includes("clicked"))
+  ) {
+    console.log("None of these buttons are clicked"); //THIS WORKS!!
+    // patrolBoat.classList.add("no-btn-clicked-error");
+    clickBtnsModal.classList.add("show");
+    tableClass.classList.add("phased-out");
+  }
+});
+
 const cells = document.querySelectorAll("td");
 
 cells.forEach((cell) =>
@@ -422,6 +443,23 @@ cells.forEach((cell) =>
     }
   })
 );
+
+tableClass.addEventListener("mouseleave", () => {
+  if (
+    (!patrolBoat.getAttribute("class").includes("clicked") &&
+      !submarine.getAttribute("class").includes("clicked") &&
+      !destroyer.getAttribute("class").includes("clicked") &&
+      !battleship.getAttribute("class").includes("clicked") &&
+      !carrier.getAttribute("class").includes("clicked")) ||
+    (!horizantal.getAttribute("class").includes("clicked") &&
+      !vertical.getAttribute("class").includes("clicked"))
+  ) {
+    console.log("None of these buttons are clicked"); //THIS WORKS!!
+    // patrolBoat.classList.remove("no-btn-clicked-error");
+    clickBtnsModal.classList.remove("show");
+    tableClass.classList.remove("phased-out");
+  }
+});
 
 cells.forEach((cell) =>
   cell.addEventListener("mouseout", () => {
