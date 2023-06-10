@@ -47,3 +47,62 @@ fieldset{
   margin-top: 1rem;
   padding: .5rem;
 }
+.name-plate, 
+.boat-selection-title,
+.boat-orientation-title{
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.grid,
+.boat-selection,
+.boat-orientation{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boat-selection-btns,
+.boat-orientation-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+/* button:hover{
+background-color: darkgray;
+} */
+th, td{
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  width: 2rem;
+}
+/* td:hover{
+  background-color: gray;
+} */
+
+.clicked{
+  background-color: orange;
+}
+
+.outside-grid{
+  cursor: not-allowed;
+}
+
+.outside-grid-error{
+  background-color: red;
+  animation-name: off-grid-error;
+  animation-duration: .4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes off-grid-error{
+  from {background-color: red;}
+  to {background-color: white;}
+}
