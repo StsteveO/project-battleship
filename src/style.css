@@ -97,7 +97,7 @@ th, td{
 .outside-grid-error{
   background-color: red;
   animation-name: off-grid-error;
-  animation-duration: .4s;
+  animation-duration: 400ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -129,6 +129,8 @@ th, td{
   transform: translate(-50%, -50%);
   opacity: 0%;
   padding: 1rem;
+  transition-duration: 200ms;
+  transition-property: opacity;
 }
 
 .show{
@@ -152,3 +154,7 @@ th, td{
   from {background-color: orange;}
   to {background-color: white;}
 } */
+
+.selected{
+  background-color: black;
+}

@@ -156,6 +156,14 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -170,6 +178,14 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -188,6 +204,18 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_horizantal && !nextCell3_horizantal) {
         cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
     }
@@ -210,6 +238,18 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -230,6 +270,18 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+     if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -248,6 +300,18 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_vertical && !nextCell3_vertical) {
         cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
     }
@@ -293,6 +357,22 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+        nextCell4_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -318,6 +398,22 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_vertical && !nextCell3_vertical && !nextCell4_vertical) {
         cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+        nextCell4_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
     }
@@ -380,6 +476,26 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+        nextCell4_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell5_horizantal && nextCell5_horizantal.getAttribute("class").includes("selected")){
+        nextCell5_horizantal.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
     }
 
     if (
@@ -438,6 +554,26 @@ cells.forEach((cell) =>
         !nextCell5_vertical
       ) {
         cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+     if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+        nextCell4_vertical.classList.add("outside-grid-error");
+        grid.classList.add("outside-grid");
+      }
+      if (nextCell5_vertical && nextCell5_vertical.getAttribute("class").includes("selected")){
+        nextCell5_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
     }
@@ -504,6 +640,14 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -518,6 +662,14 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -536,6 +688,18 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_horizantal && !nextCell3_horizantal) {
         cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
     }
@@ -558,6 +722,18 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -578,6 +754,18 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -596,6 +784,18 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_vertical && !nextCell3_vertical) {
         cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
     }
@@ -641,6 +841,22 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+        nextCell4_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -666,6 +882,22 @@ cells.forEach((cell) =>
       }
       if (!nextCell2_vertical && !nextCell3_vertical && !nextCell4_vertical) {
         cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+        nextCell4_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
     }
@@ -728,6 +960,26 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+        nextCell2_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+        nextCell3_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+        nextCell4_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell5_horizantal && nextCell5_horizantal.getAttribute("class").includes("selected")){
+        nextCell5_horizantal.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
     }
 
     if (
@@ -787,6 +1039,253 @@ cells.forEach((cell) =>
       ) {
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
+      }
+      if (cell.getAttribute("class").includes("selected")) {
+        cell.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+        nextCell2_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+        nextCell3_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+        nextCell4_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+      if (nextCell5_vertical && nextCell5_vertical.getAttribute("class").includes("selected")){
+        nextCell5_vertical.classList.remove("outside-grid-error");
+        grid.classList.remove("outside-grid");
+      }
+    }
+  })
+);
+
+
+
+
+cells.forEach((cell) =>
+  cell.addEventListener("click", () => {
+    const xNum = Number(cell.dataset.xValue);
+    const yNum = Number(cell.dataset.yValue);
+
+    const nextCell2_horizantal = document.querySelector(
+      `[data-code= "${xNum + 1}${yNum}"]`
+    );
+    const nextCell3_horizantal = document.querySelector(
+      `[data-code= "${xNum + 2}${yNum}"]`
+    );
+    const nextCell4_horizantal = document.querySelector(
+      `[data-code= "${xNum + 3}${yNum}"]`
+    );
+    const nextCell5_horizantal = document.querySelector(
+      `[data-code= "${xNum + 4}${yNum}"]`
+    );
+
+    const nextCell2_vertical = document.querySelector(
+      `[data-code= "${xNum}${yNum + 1}"]`
+    );
+    const nextCell3_vertical = document.querySelector(
+      `[data-code= "${xNum}${yNum + 2}"]`
+    );
+    const nextCell4_vertical = document.querySelector(
+      `[data-code= "${xNum}${yNum + 3}"]`
+    );
+    const nextCell5_vertical = document.querySelector(
+      `[data-code= "${xNum}${yNum + 4}"]`
+    );
+
+    if (
+      patrolBoat.getAttribute("class").includes("clicked") &&
+      horizantal.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_horizantal.getAttribute("class").includes("selected")
+        ) {
+          patrolBoat.classList.remove("clicked");
+          patrolBoat.disabled=true;
+          cell.classList.add("selected");  
+          nextCell2_horizantal.classList.add("selected");
+      }
+    }
+
+    if (
+      patrolBoat.getAttribute("class").includes("clicked") &&
+      vertical.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
+        patrolBoat.classList.remove("clicked");
+        patrolBoat.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_vertical.classList.add("selected");
+      }
+    }
+
+    if (
+      submarine.getAttribute("class").includes("clicked") &&
+      horizantal.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
+        submarine.classList.remove("clicked");
+        submarine.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_horizantal.classList.add("selected");
+        nextCell3_horizantal.classList.add("selected");
+      }
+    }
+
+    if (
+      submarine.getAttribute("class").includes("clicked") &&
+      vertical.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_vertical.getAttribute("class").includes("selected") &&
+        !nextCell3_vertical.getAttribute("class").includes("selected") &&
+        !grid.getAttribute("class").includes("outside-grid")
+      ) {
+        submarine.classList.remove("clicked");
+        submarine.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_vertical.classList.add("selected");
+        nextCell3_vertical.classList.add("selected");
+      }
+    }
+
+    if (
+      destroyer.getAttribute("class").includes("clicked") &&
+      horizantal.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
+        destroyer.classList.remove("clicked");
+        destroyer.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_horizantal.classList.add("selected");
+        nextCell3_horizantal.classList.add("selected");
+      }
+    }
+
+    if (
+      destroyer.getAttribute("class").includes("clicked") &&
+      vertical.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_vertical.getAttribute("class").includes("selected") &&
+        !nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
+        destroyer.classList.remove("clicked");
+        destroyer.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_vertical.classList.add("selected");
+        nextCell3_vertical.classList.add("selected");
+      }
+    }
+
+    if (
+      battleship.getAttribute("class").includes("clicked") &&
+      horizantal.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell3_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell4_horizantal.getAttribute("class").includes("selected") &&
+        !grid.getAttribute("class").includes("outside-grid")
+      ) {
+        battleship.classList.remove("clicked");
+        battleship.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_horizantal.classList.add("selected");
+        nextCell3_horizantal.classList.add("selected");
+        nextCell4_horizantal.classList.add("selected");
+      }
+    }
+
+    if (
+      battleship.getAttribute("class").includes("clicked") &&
+      vertical.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_vertical.getAttribute("class").includes("selected") &&
+        !nextCell3_vertical.getAttribute("class").includes("selected") &&
+        !nextCell4_vertical.getAttribute("class").includes("selected") &&
+        !grid.getAttribute("class").includes("outside-grid")
+      ) {
+        battleship.classList.remove("clicked");
+        battleship.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_vertical.classList.add("selected");
+        nextCell3_vertical.classList.add("selected");
+        nextCell4_vertical.classList.add("selected");
+      }
+    }
+
+    if (
+      carrier.getAttribute("class").includes("clicked") &&
+      horizantal.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell3_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell4_horizantal.getAttribute("class").includes("selected") &&
+        !nextCell5_horizantal.getAttribute("class").includes("selected")
+      ) {
+        carrier.classList.remove("clicked");
+        carrier.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_horizantal.classList.add("selected");
+        nextCell3_horizantal.classList.add("selected");
+        nextCell4_horizantal.classList.add("selected");
+        nextCell5_horizantal.classList.add("selected");
+      }
+    }
+
+    if (
+      carrier.getAttribute("class").includes("clicked") &&
+      vertical.getAttribute("class").includes("clicked") &&
+      !grid.getAttribute("class").includes("outside-grid")
+    ) {
+      if (
+        !cell.getAttribute("class").includes("selected") &&
+        !nextCell2_vertical.getAttribute("class").includes("selected") &&
+        !nextCell3_vertical.getAttribute("class").includes("selected") &&
+        !nextCell4_vertical.getAttribute("class").includes("selected") &&
+        !nextCell5_vertical.getAttribute("class").includes("selected")
+      ) {
+        carrier.classList.remove("clicked");
+        carrier.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_vertical.classList.add("selected");
+        nextCell3_vertical.classList.add("selected");
+        nextCell4_vertical.classList.add("selected");
+        nextCell5_vertical.classList.add("selected");
       }
     }
   })
