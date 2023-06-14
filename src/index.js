@@ -91,18 +91,18 @@ vertical.addEventListener("click", (e) => {
 });
 
 //click-btns-modal
-const clickBtnsModal= document.querySelector(".click-btns-modal");
-const tableClass= document.querySelector(".table-class");
+const clickBtnsModal = document.querySelector(".click-btns-modal");
+const tableClass = document.querySelector(".table-class");
 
-tableClass.addEventListener("mouseenter", ()=>{
+tableClass.addEventListener("mouseenter", () => {
   if (
     (!patrolBoat.getAttribute("class").includes("clicked") &&
-    !submarine.getAttribute("class").includes("clicked") &&
-    !destroyer.getAttribute("class").includes("clicked") &&
-    !battleship.getAttribute("class").includes("clicked") &&
-    !carrier.getAttribute("class").includes("clicked")) ||
+      !submarine.getAttribute("class").includes("clicked") &&
+      !destroyer.getAttribute("class").includes("clicked") &&
+      !battleship.getAttribute("class").includes("clicked") &&
+      !carrier.getAttribute("class").includes("clicked")) ||
     (!horizantal.getAttribute("class").includes("clicked") &&
-    !vertical.getAttribute("class").includes("clicked"))
+      !vertical.getAttribute("class").includes("clicked"))
   ) {
     console.log("None of these buttons are clicked"); //THIS WORKS!!
     // patrolBoat.classList.add("no-btn-clicked-error");
@@ -111,7 +111,8 @@ tableClass.addEventListener("mouseenter", ()=>{
   }
 });
 
-const cells = document.querySelectorAll("td");
+// const cells = document.querySelectorAll("td");
+const cells = document.querySelectorAll(".player-cell");
 
 cells.forEach((cell) =>
   cell.addEventListener("mouseover", () => {
@@ -160,7 +161,10 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -182,7 +186,10 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -210,11 +217,17 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -242,11 +255,17 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -270,15 +289,21 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-     if (cell.getAttribute("class").includes("selected")) {
+      if (cell.getAttribute("class").includes("selected")) {
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -306,11 +331,17 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -361,15 +392,24 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_horizantal &&
+        nextCell4_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell4_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -404,15 +444,24 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_vertical &&
+        nextCell4_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell4_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -480,19 +529,31 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_horizantal &&
+        nextCell4_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell4_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell5_horizantal && nextCell5_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell5_horizantal &&
+        nextCell5_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell5_horizantal.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -556,23 +617,35 @@ cells.forEach((cell) =>
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-     if (cell.getAttribute("class").includes("selected")) {
+      if (cell.getAttribute("class").includes("selected")) {
         cell.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_vertical &&
+        nextCell4_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell4_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
-      if (nextCell5_vertical && nextCell5_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell5_vertical &&
+        nextCell5_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell5_vertical.classList.add("outside-grid-error");
         grid.classList.add("outside-grid");
       }
@@ -644,7 +717,10 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -666,7 +742,10 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -694,11 +773,17 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -726,11 +811,17 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -758,11 +849,17 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -790,11 +887,17 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -845,15 +948,24 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_horizantal &&
+        nextCell4_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell4_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -888,15 +1000,24 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_vertical &&
+        nextCell4_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell4_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -964,19 +1085,31 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_horizantal && nextCell2_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_horizantal &&
+        nextCell2_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell2_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_horizantal && nextCell3_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_horizantal &&
+        nextCell3_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell3_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell4_horizantal && nextCell4_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_horizantal &&
+        nextCell4_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell4_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell5_horizantal && nextCell5_horizantal.getAttribute("class").includes("selected")){
+      if (
+        nextCell5_horizantal &&
+        nextCell5_horizantal.getAttribute("class").includes("selected")
+      ) {
         nextCell5_horizantal.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
@@ -1044,28 +1177,37 @@ cells.forEach((cell) =>
         cell.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell2_vertical && nextCell2_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell2_vertical &&
+        nextCell2_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell2_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell3_vertical && nextCell3_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell3_vertical &&
+        nextCell3_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell3_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell4_vertical && nextCell4_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell4_vertical &&
+        nextCell4_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell4_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
-      if (nextCell5_vertical && nextCell5_vertical.getAttribute("class").includes("selected")){
+      if (
+        nextCell5_vertical &&
+        nextCell5_vertical.getAttribute("class").includes("selected")
+      ) {
         nextCell5_vertical.classList.remove("outside-grid-error");
         grid.classList.remove("outside-grid");
       }
     }
   })
 );
-
-
-
 
 cells.forEach((cell) =>
   cell.addEventListener("click", () => {
@@ -1106,11 +1248,11 @@ cells.forEach((cell) =>
       if (
         !cell.getAttribute("class").includes("selected") &&
         !nextCell2_horizantal.getAttribute("class").includes("selected")
-        ) {
-          patrolBoat.classList.remove("clicked");
-          patrolBoat.disabled=true;
-          cell.classList.add("selected");  
-          nextCell2_horizantal.classList.add("selected");
+      ) {
+        patrolBoat.classList.remove("clicked");
+        patrolBoat.disabled = true;
+        cell.classList.add("selected");
+        nextCell2_horizantal.classList.add("selected");
       }
     }
 
@@ -1287,6 +1429,176 @@ cells.forEach((cell) =>
         nextCell4_vertical.classList.add("selected");
         nextCell5_vertical.classList.add("selected");
       }
+
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("All boats have been placed");
+      }
     }
   })
 );
+
+//owkring on computer functionality
+function randomNumBetween(min, max) {
+  let num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+function computerOrientation() {
+  let computerOrientation = Math.floor(Math.random() * 2) + 1;
+  if (computerOrientation === 1) {
+    return "horizantal";
+  }
+  if (computerOrientation === 2) {
+    return "vertical";
+  }
+}
+
+console.log(computerOrientation());
+
+let usedNumbers = [];
+
+class ComputerBoat {
+  constructor(
+    name,
+    orientation
+    // xValue,
+    // yValue,
+    // startingCell,
+    // nextCell2,
+    // nextCell3,
+    // nextCell4,
+    // nextCell5
+  ) {
+    this.name = name;
+    this.orientation = orientation;
+    // this.xValue = randomNumBetween(1, 9);
+    // this.yValue = randomNumBetween(1, 10);
+    // this.startingCell = document.querySelector(
+    //   `[data-computer-code= "${this.xValue}${this.yValue}"]`
+    // );
+    // this.nextCell2 = document.querySelector(
+    //   `[data-computer-code= "${this.xValue + 1}${this.yValue}"]`
+    // );
+    // this.nextCell3 = nextCell3;
+    // this.nextCell4 = nextCell4;
+    // this.nextCell5 = nextCell5;
+  }
+  computerCode() {
+    if (this.name === "patrolBoat" && this.orientation === "horizantal") {
+      let x = randomNumBetween(1, 9);
+      let y = randomNumBetween(1, 10);
+      let nextCell2= x+1;
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let nextCell2String= nextCell2.toString();      
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= nextCell2String + yToString;
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualNextCell2.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+      }
+    }
+    if (this.name === "submarine" && this.orientation === "horizantal") {
+      let x = randomNumBetween(1, 8);
+      let y = randomNumBetween(1, 10);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "destroyer" && this.orientation === "horizantal") {
+      let x = randomNumBetween(1, 8);
+      let y = randomNumBetween(1, 10);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "battleship" && this.orientation === "horizantal") {
+      let x = randomNumBetween(1, 7);
+      let y = randomNumBetween(1, 10);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "carrier" && this.orientation === "horizantal") {
+      let x = randomNumBetween(1, 6);
+      let y = randomNumBetween(1, 10);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "patrolBoat" && this.orientation === "vertical") {
+      let x = randomNumBetween(1, 10);
+      let y = randomNumBetween(1, 9);
+      let nextCell2 = y + 1;
+
+      let xToString = x.toString();
+      let yToString = y.toString();
+      let nextCell2String = nextCell2.toString();
+      let cellCode = xToString + yToString;
+      let nextCell2Code = xToString + nextCell2String;
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualNextCell2.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+      }
+    }
+    if (this.name === "submarine" && this.orientation === "vertical") {
+      let x = randomNumBetween(1, 10);
+      let y = randomNumBetween(1, 8);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "destroyer" && this.orientation === "vertical") {
+      let x = randomNumBetween(1, 10);
+      let y = randomNumBetween(1, 8);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "battleship" && this.orientation === "vertical") {
+      let x = randomNumBetween(1, 10);
+      let y = randomNumBetween(1, 7);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+    if (this.name === "carrier" && this.orientation === "vertical") {
+      let x = randomNumBetween(1, 10);
+      let y = randomNumBetween(1, 6);
+      let xToString= x.toString();      
+      let yToString= y.toString();
+      let code= xToString + yToString;  
+      return code;
+    }
+  }
+}
+
+let patrolBoatComputer = new ComputerBoat("patrolBoat", computerOrientation());
+
+console.log(patrolBoatComputer);
+console.log(patrolBoatComputer.computerCode());

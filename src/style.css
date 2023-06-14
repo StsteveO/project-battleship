@@ -10,16 +10,12 @@ html {
   /* background-color: skyblue; */
 }
 :root {
-  /* --custom name: value; */
+  /* --custom-name: value; */
   /* --light-green-bg: #476529; */
   /* example, color: var(--navy-clr) */
-  --header-clr: rgb(90, 141, 161);
-  --nav-clr: #4C5958;
-  --main-clr: #BFBFBF;
-  --high-pri-clr: #DB2E1A;
-  --med-pri-clr: #D6AB0F;
-  --low-pri-clr: #10A11C;
-  --default-list-clr: #8AA6A3;
+  --primary-clr: #8AA6A3;
+  --secondary-clr: #8AA6A3;
+  --accent-clr: #8AA6A3;
 }
 .header{
     display: flex;
@@ -47,7 +43,8 @@ fieldset{
   margin-top: 1rem;
   padding: .5rem;
 }
-.name-plate, 
+.name-plate,
+.computer-name-plate, 
 .boat-selection-title,
 .boat-orientation-title{
   margin-bottom: 1rem;
@@ -58,6 +55,7 @@ table, th, td {
   border: 1px solid black;
 }
 .grid,
+.computer-grid,
 .boat-selection,
 .boat-orientation{
   margin-top: 1rem;
@@ -74,26 +72,17 @@ table, th, td {
   flex-wrap: wrap;
   gap: .25rem;
 }
-/* button:hover{
-background-color: darkgray;
-} */
 th, td{
   padding-top: .25rem;
   padding-bottom: .25rem;
   width: 2rem;
 }
-/* td:hover{
-  background-color: gray;
-} */
-
 .clicked{
   background-color: orange;
 }
-
 .outside-grid{
   cursor: not-allowed;
 }
-
 .outside-grid-error{
   background-color: red;
   animation-name: off-grid-error;
@@ -101,20 +90,18 @@ th, td{
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
 @keyframes off-grid-error{
   from {background-color: red;}
   to {background-color: white;}
 }
-
-.table-class{
+.table-class,
+.computer-table-class{
   position: relative;
 }
-
-.grid{
+.grid,
+.computer-grid{
   position: relative;
 }
-
 .click-btns-modal{
   width: 40%;
   height: auto;
@@ -132,29 +119,15 @@ th, td{
   transition-duration: 200ms;
   transition-property: opacity;
 }
-
 .show{
   opacity: 100%;
 }
-
 .phased-out{
   opacity: 30%;
 }
-
-/* 
-.no-btn-clicked-error{
-  background-color: orange;
-  animation-name: no-btn-clicked-error;
-  animation-duration: .4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes no-btn-clicked-error{
-  from {background-color: orange;}
-  to {background-color: white;}
-} */
-
 .selected{
+  background-color: black;
+}
+.computer-selected{
   background-color: black;
 }
