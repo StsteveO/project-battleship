@@ -1505,6 +1505,7 @@ class ComputerBoat {
         let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
         let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
         actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
         actualNextCell2.classList.add("computer-selected");
         usedNumbers.push(cellCode);
         usedNumbers.push(nextCell2Code);
@@ -1513,40 +1514,133 @@ class ComputerBoat {
     if (this.name === "submarine" && this.orientation === "horizantal") {
       let x = randomNumBetween(1, 8);
       let y = randomNumBetween(1, 10);
+      let nextCell2= x+1;
+      let nextCell3= x+2;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= nextCell2String + yToString; 
+      let nextCell3Code= nextCell3String + yToString; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+      }
     }
     if (this.name === "destroyer" && this.orientation === "horizantal") {
       let x = randomNumBetween(1, 8);
       let y = randomNumBetween(1, 10);
+      let nextCell2= x+1;
+      let nextCell3= x+2;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= nextCell2String + yToString; 
+      let nextCell3Code= nextCell3String + yToString; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+      }
     }
     if (this.name === "battleship" && this.orientation === "horizantal") {
       let x = randomNumBetween(1, 7);
       let y = randomNumBetween(1, 10);
+      let nextCell2= x+1;
+      let nextCell3= x+2;
+      let nextCell4= x+3;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let nextCell4String= nextCell4.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= nextCell2String + yToString; 
+      let nextCell3Code = nextCell3String + yToString;
+      let nextCell4Code = nextCell4String + yToString; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code) || usedNumbers.includes(nextCell4Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        actualNextCell4.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+        usedNumbers.push(nextCell4Code);
+      }
     }
     if (this.name === "carrier" && this.orientation === "horizantal") {
       let x = randomNumBetween(1, 6);
       let y = randomNumBetween(1, 10);
+      let nextCell2= x+1;
+      let nextCell3= x+2;
+      let nextCell4= x+3;
+      let nextCell5= x+4;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let nextCell4String= nextCell4.toString();     
+      let nextCell5String= nextCell5.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= nextCell2String + yToString; 
+      let nextCell3Code = nextCell3String + yToString;
+      let nextCell4Code = nextCell4String + yToString;
+      let nextCell5Code = nextCell5String + yToString; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code) || usedNumbers.includes(nextCell4Code) || usedNumbers.includes(nextCell5Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
+        let actualNextCell5 = document.querySelector(`[data-computer-code= "${nextCell5Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        actualNextCell4.classList.add("computer-selected");
+        actualNextCell5.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+        usedNumbers.push(nextCell4Code);
+        usedNumbers.push(nextCell5Code);
+      }
     }
     if (this.name === "patrolBoat" && this.orientation === "vertical") {
       let x = randomNumBetween(1, 10);
       let y = randomNumBetween(1, 9);
       let nextCell2 = y + 1;
-
       let xToString = x.toString();
       let yToString = y.toString();
       let nextCell2String = nextCell2.toString();
@@ -1558,6 +1652,7 @@ class ComputerBoat {
         let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
         let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
         actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
         actualNextCell2.classList.add("computer-selected");
         usedNumbers.push(cellCode);
         usedNumbers.push(nextCell2Code);
@@ -1566,39 +1661,140 @@ class ComputerBoat {
     if (this.name === "submarine" && this.orientation === "vertical") {
       let x = randomNumBetween(1, 10);
       let y = randomNumBetween(1, 8);
+      let nextCell2= y+1;
+      let nextCell3= y+2;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= xToString + nextCell2String; 
+      let nextCell3Code= xToString + nextCell3String; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+      }
     }
     if (this.name === "destroyer" && this.orientation === "vertical") {
       let x = randomNumBetween(1, 10);
       let y = randomNumBetween(1, 8);
+      let nextCell2= y+1;
+      let nextCell3= y+2;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code= xToString + nextCell2String; 
+      let nextCell3Code= xToString + nextCell3String; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+      }
     }
     if (this.name === "battleship" && this.orientation === "vertical") {
       let x = randomNumBetween(1, 10);
       let y = randomNumBetween(1, 7);
+      let nextCell2= y+1;
+      let nextCell3= y+2;
+      let nextCell4= y+3;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let nextCell4String= nextCell4.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code = xToString + nextCell2String; 
+      let nextCell3Code = xToString + nextCell3String;
+      let nextCell4Code = xToString + nextCell4String; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code) || usedNumbers.includes(nextCell4Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        actualNextCell4.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+        usedNumbers.push(nextCell4Code);
+      }
     }
     if (this.name === "carrier" && this.orientation === "vertical") {
       let x = randomNumBetween(1, 10);
       let y = randomNumBetween(1, 6);
+      let nextCell2= y+1;
+      let nextCell3= y+2;
+      let nextCell4= y+3;
+      let nextCell5= y+4;
       let xToString= x.toString();      
       let yToString= y.toString();
-      let code= xToString + yToString;  
-      return code;
+      let nextCell2String= nextCell2.toString();      
+      let nextCell3String= nextCell3.toString();     
+      let nextCell4String= nextCell4.toString();     
+      let nextCell5String= nextCell5.toString();     
+      let cellCode= xToString + yToString;  
+      let nextCell2Code = xToString + nextCell2String; 
+      let nextCell3Code = xToString + nextCell3String;
+      let nextCell4Code = xToString + nextCell4String;
+      let nextCell5Code = xToString + nextCell5String; 
+      if(usedNumbers.includes(cellCode) || usedNumbers.includes(nextCell2Code) || usedNumbers.includes(nextCell3Code) || usedNumbers.includes(nextCell4Code) || usedNumbers.includes(nextCell5Code)){
+        this.computerCode();
+      }else{
+        let actualCell = document.querySelector(`[data-computer-code= "${cellCode}"]`);
+        let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
+        let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
+        let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
+        let actualNextCell5 = document.querySelector(`[data-computer-code= "${nextCell5Code}"]`);
+        actualCell.classList.add("computer-selected");
+        actualCell.textContent= "1";
+        actualNextCell2.classList.add("computer-selected");
+        actualNextCell3.classList.add("computer-selected");
+        actualNextCell4.classList.add("computer-selected");
+        actualNextCell5.classList.add("computer-selected");
+        usedNumbers.push(cellCode);
+        usedNumbers.push(nextCell2Code);
+        usedNumbers.push(nextCell3Code);
+        usedNumbers.push(nextCell4Code);
+        usedNumbers.push(nextCell5Code);
+      }
     }
   }
 }
 
 let patrolBoatComputer = new ComputerBoat("patrolBoat", computerOrientation());
+let submarineComputer = new ComputerBoat("submarine", computerOrientation());
+let destroyerComputer = new ComputerBoat("destroyer", computerOrientation());
+let battleshipComputer = new ComputerBoat("battleship", computerOrientation());
+let carrierComputer = new ComputerBoat("carrier", computerOrientation());
 
-console.log(patrolBoatComputer);
-console.log(patrolBoatComputer.computerCode());
+patrolBoatComputer.computerCode();
+submarineComputer.computerCode();
+destroyerComputer.computerCode();
+battleshipComputer.computerCode();
+carrierComputer.computerCode();
