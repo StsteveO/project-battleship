@@ -104,7 +104,7 @@ tableClass.addEventListener("mouseenter", () => {
     (!horizantal.getAttribute("class").includes("clicked") &&
       !vertical.getAttribute("class").includes("clicked"))
   ) {
-    console.log("None of these buttons are clicked"); //THIS WORKS!!
+    // console.log("None of these buttons are clicked"); //THIS WORKS!!
     // patrolBoat.classList.add("no-btn-clicked-error");
     clickBtnsModal.classList.add("show");
     tableClass.classList.add("phased-out");
@@ -663,7 +663,7 @@ tableClass.addEventListener("mouseleave", () => {
     (!horizantal.getAttribute("class").includes("clicked") &&
       !vertical.getAttribute("class").includes("clicked"))
   ) {
-    console.log("None of these buttons are clicked"); //THIS WORKS!!
+    // console.log("None of these buttons are clicked"); //THIS WORKS!!
     // patrolBoat.classList.remove("no-btn-clicked-error");
     clickBtnsModal.classList.remove("show");
     tableClass.classList.remove("phased-out");
@@ -1895,44 +1895,44 @@ computerCells.forEach((computerCell) => {
     if (computerCell.getAttribute("class").includes("computer-selected")) {
       computerCell.classList.add("hit");
       // computerCell.textContent = "X";
-      setTimeout((()=>{computerCell.textContent = "X"}), 2000);
+      setTimeout((()=>{computerCell.textContent = "X"}), 100);
       computerTotalTally++;
     }else{
       computerCell.classList.add("missed");
     }
 
     if(computerCell.getAttribute("class").includes("patrol-boat") && patrolBoatTally===1){
-      setTimeout((()=>{console.log("HIT! you sunk their Patrol Boat")}), 2000);
+      setTimeout((()=>{console.log("HIT! you sunk their Patrol Boat")}), 100);
     }else if (computerCell.getAttribute("class").includes("patrol-boat")){
       patrolBoatTally++;
     };
 
     if(computerCell.getAttribute("class").includes("submarine") && submarineTally===2){
-      setTimeout((()=>{console.log("HIT! you sunk their Submarine")}), 2000);
+      setTimeout((()=>{console.log("HIT! you sunk their Submarine")}), 100);
     }else if (computerCell.getAttribute("class").includes("submarine")){
       submarineTally++;
     };
 
     if(computerCell.getAttribute("class").includes("destroyer") && destroyerTally===2){
-      setTimeout((()=>{console.log("HIT! you sunk their Destroyer")}), 2000);
+      setTimeout((()=>{console.log("HIT! you sunk their Destroyer")}), 100);
     }else if (computerCell.getAttribute("class").includes("destroyer")){
       destroyerTally++;
     };
 
     if(computerCell.getAttribute("class").includes("battleship") && battleshipTally===3){
-      setTimeout((()=>{console.log("HIT! you sunk their Battleship")}), 2000);
+      setTimeout((()=>{console.log("HIT! you sunk their Battleship")}), 100);
     }else if (computerCell.getAttribute("class").includes("battleship")){
       battleshipTally++;
     };
 
     if(computerCell.getAttribute("class").includes("carrier") && carrierTally===4){
-      setTimeout((()=>{console.log("HIT! you sunk their Carrier")}), 2000);
+      setTimeout((()=>{console.log("HIT! you sunk their Carrier")}), 100);
     }else if (computerCell.getAttribute("class").includes("carrier")){
       carrierTally++;
     };
 
     if(computerTotalTally===17){
-      setTimeout((()=>{console.log("YOU WON!")}), 2000);
+      setTimeout((()=>{console.log("YOU WON!")}), 100);
     }
 
     let playerTotalTally = 0;
@@ -1944,56 +1944,101 @@ computerCells.forEach((computerCell) => {
 
     const overlay= document.querySelector(".overlay");
     overlay.classList.add("show");
-    // setTimeout((()=>{overlay.classList.add("show");}), 4000);
+    // setTimeout((()=>{overlay.classList.add("show");}), 100);
 
 
-    let playersXValue = randomNumBetween(1,10);
-    let playersYValue = randomNumBetween(1, 10);
-    let computerAttack= document.querySelector(`[data-code= "${playersXValue}${playersYValue}"]`);
+    // let playersXValue = randomNumBetween(1,10);
+    // let playersYValue = randomNumBetween(1, 10);
+
+    function randomPlayerCode() {
+      let playersXValue = randomNumBetween(1, 10);
+      console.log("players x value num= "+ playersXValue);
+      let playersYValue = randomNumBetween(1, 10);
+      console.log("players y value num= "+ playersYValue);
+      let playersXValueString= playersXValue.toString();
+      console.log("players x value str= "+ playersXValueString);
+      let playersYValueString= playersYValue.toString();
+      console.log("players y value str= "+ playersYValueString);
+      let playerCodeValue = playersXValueString + playersYValueString;
+
+      console.log(usedNumbers2.length);
+
+      if (usedNumbers2.length===100){
+        console.log("No more player spaces");
+        return 11;
+      }
+      if(!usedNumbers2.includes(playerCodeValue)){
+        usedNumbers2.push(playerCodeValue);
+        console.log("players code= " + playerCodeValue);
+        return playerCodeValue;
+      }else{
+        console.log("A coordinate has been repeated");
+        return randomPlayerCode();
+      };
+
+
+      // if(usedNumbers2.includes(playerCodeValue)){
+      //   console.log("retry")
+      //   randomPlayerCode();
+      // }else{
+      //   usedNumbers2.push(playerCodeValue);
+      //   console.log("players code= "+ playerCodeValue);
+      //   return playerCodeValue;
+      // }
+    };
+
+
+    if(randomPlayerCode===null || randomPlayerCode===undefined){
+      console.log("getting closer to your bug");
+      console.log(randomPlayerCode());
+    }
+
+
+    let computerAttack= document.querySelector(`[data-code= "${randomPlayerCode()}"]`);
     
-    console.log(usedNumbers2);
+    console.log(computerAttack);
 /////////////////////////////////////////////////
     if (computerAttack.getAttribute("class").includes("selected")) {
       computerAttack.classList.add("hit");
       // computerAttack.textContent = "X";
-      setTimeout((()=>{computerAttack.textContent = "X"}), 2000);
+      setTimeout((()=>{computerAttack.textContent = "X"}), 100);
       playerTotalTally++;
     }else{
       computerAttack.classList.add("missed");
     }
 
     if(computerAttack.getAttribute("class").includes("player-patrol-boat") && playerPatrolBoatTally===1){
-      setTimeout((()=>{console.log("HIT! your Patrol Boat has been sank")}), 2000);
+      setTimeout((()=>{console.log("HIT! your Patrol Boat has been sank")}), 100);
     }else if (computerAttack.getAttribute("class").includes("player-patrol-boat")){
       playerPatrolBoatTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-submarine") && playerSubmarineTally===2){
-      setTimeout((()=>{console.log("HIT! your Submarine has been sank")}), 2000);
+      setTimeout((()=>{console.log("HIT! your Submarine has been sank")}), 100);
     }else if (computerAttack.getAttribute("class").includes("player-submarine")){
       playerSubmarineTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-destroyer") && playerDestroyerTally===2){
-      setTimeout((()=>{console.log("HIT! your Destroyer has been sank")}), 2000);
+      setTimeout((()=>{console.log("HIT! your Destroyer has been sank")}), 100);
     }else if (computerAttack.getAttribute("class").includes("player-destroyer")){
       playerDestroyerTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-battleship") && playerBattleshipTally===3){
-      setTimeout((()=>{console.log("HIT! your Battleship has been sank")}), 2000);
+      setTimeout((()=>{console.log("HIT! your Battleship has been sank")}), 100);
     }else if (computerAttack.getAttribute("class").includes("player-battleship")) {
       playerBattleshipTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-carrier") && playerCarrierTally===4){
-      setTimeout((()=>{console.log("HIT! your Carrier has been sank")}), 2000);
+      setTimeout((()=>{console.log("HIT! your Carrier has been sank")}), 100);
     }else if (computerAttack.getAttribute("class").includes("player-carrier")) {
       playerCarrierTally++;
     };
 
     if(playerTotalTally===17){
-      setTimeout((()=>{console.log("You Lost!")}), 2000);
+      setTimeout((()=>{console.log("You Lost!")}), 100);
     }
 
 
@@ -2001,9 +2046,9 @@ computerCells.forEach((computerCell) => {
 
 /////////////////////////////////////////////////
     // computerAttack.classList.add("clicked");
-    setTimeout((()=>{computerAttack.classList.add("player-cell-targeted");}), 6000);
+    setTimeout((()=>{computerAttack.classList.add("player-cell-targeted");}), 100);
 
-    setTimeout((()=>{overlay.classList.remove("show");}), 9000);
+    setTimeout((()=>{overlay.classList.remove("show");}), 100);
 
 
   });
