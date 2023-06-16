@@ -131,4 +131,50 @@ th, td{
 .computer-selected{
   background-color: black;
   color: white;
+  /* opacity: 30%; */
+}
+.computer-clicked{
+  background-color: orange;
+  cursor: pointer;
+}
+.computer-cell-targeted{
+  background-color: red;
+  animation-name: computer-cell-targeted;
+  animation-duration: 200ms;
+  animation-iteration-count: 11;
+  animation-direction: alternate;
+}
+@keyframes computer-cell-targeted{
+  from {background-color: orange;}
+  to {background-color: red;}
+}
+.player-cell-targeted{
+  background-color: red;
+  animation-name: computer-cell-targeted;
+  animation-duration: 200ms;
+  animation-iteration-count: 11;
+  animation-direction: alternate;
+}
+.hit{
+  background-color: red;
+  text-align: center;
+  transition-duration: 200ms;
+}
+.missed{
+  background-color: gray;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: 200ms;
+}
+.overlay.show{
+  opacity: 1;
+  pointer-events: all;
 }
