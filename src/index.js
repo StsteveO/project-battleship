@@ -8,6 +8,8 @@ import {
 } from "../src/functions _&_tests/functions";
 import { exampleAdd } from "../src/DOM-interactions/DOM-interactions";
 
+let scoreboardText = document.querySelector(".scoreboard-text");
+
 const namePlate = document.querySelector(".name-plate");
 const nameSubmit = document.querySelector(".form.player-name");
 
@@ -1889,6 +1891,16 @@ let destroyerTally=0;
 let battleshipTally=0;
 let carrierTally=0;
 
+
+let playerTotalTally = 0;
+let playerPatrolBoatTally = 0;
+let playerSubmarineTally = 0;
+let playerDestroyerTally = 0;
+let playerBattleshipTally = 0;
+let playerCarrierTally = 0;
+
+
+
 computerCells.forEach((computerCell) => {
   computerCell.addEventListener("click", () => {
     computerCell.classList.add("computer-cell-targeted");
@@ -1899,35 +1911,46 @@ computerCells.forEach((computerCell) => {
       computerTotalTally++;
     }else{
       computerCell.classList.add("missed");
+      setTimeout((()=>{scoreboardText.textContent="Missed! No ships hit."}), 1000);
     }
 
     if(computerCell.getAttribute("class").includes("patrol-boat") && patrolBoatTally===1){
-      setTimeout((()=>{console.log("HIT! you sunk their Patrol Boat")}), 100);
-    }else if (computerCell.getAttribute("class").includes("patrol-boat")){
+      // setTimeout((()=>{console.log("HIT! you sunk their Patrol Boat")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! you sank their Patrol Boat!";}), 1000);
+    }else if (computerCell.getAttribute("class").includes("patrol-boat") && patrolBoatTally < 1){
+      setTimeout((()=>{scoreboardText.textContent="You hit their Patrol Boat!"}), 1000);
       patrolBoatTally++;
     };
 
     if(computerCell.getAttribute("class").includes("submarine") && submarineTally===2){
-      setTimeout((()=>{console.log("HIT! you sunk their Submarine")}), 100);
-    }else if (computerCell.getAttribute("class").includes("submarine")){
+      // setTimeout((()=>{console.log("HIT! you sunk their Submarine")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! you sank their Submarine!";}), 1000);
+    }else if (computerCell.getAttribute("class").includes("submarine") && submarineTally < 2){
+      setTimeout((()=>{scoreboardText.textContent="You hit their Submarine!"}), 1000);
       submarineTally++;
     };
 
     if(computerCell.getAttribute("class").includes("destroyer") && destroyerTally===2){
-      setTimeout((()=>{console.log("HIT! you sunk their Destroyer")}), 100);
-    }else if (computerCell.getAttribute("class").includes("destroyer")){
+      // setTimeout((()=>{console.log("HIT! you sunk their Destroyer")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! you sank their Destroyer!";}), 1000);
+    }else if (computerCell.getAttribute("class").includes("destroyer") && destroyerTally < 2){
+      setTimeout((()=>{scoreboardText.textContent="You hit their Destroyer!"}), 1000);
       destroyerTally++;
     };
 
     if(computerCell.getAttribute("class").includes("battleship") && battleshipTally===3){
-      setTimeout((()=>{console.log("HIT! you sunk their Battleship")}), 100);
-    }else if (computerCell.getAttribute("class").includes("battleship")){
+      // setTimeout((()=>{console.log("HIT! you sunk their Battleship")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! YOU SANK THEIR BATTLESHIP!";}), 1000);
+    }else if (computerCell.getAttribute("class").includes("battleship") && battleshipTally < 3){
+      setTimeout((()=>{scoreboardText.textContent="You hit their Battleship!"}), 1000);
       battleshipTally++;
     };
 
     if(computerCell.getAttribute("class").includes("carrier") && carrierTally===4){
-      setTimeout((()=>{console.log("HIT! you sunk their Carrier")}), 100);
-    }else if (computerCell.getAttribute("class").includes("carrier")){
+      // setTimeout((()=>{console.log("HIT! you sunk their Carrier")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! you sank their Carrier!";}), 1000);
+    }else if (computerCell.getAttribute("class").includes("carrier") && carrierTally < 4){
+      setTimeout((()=>{scoreboardText.textContent="You hit their Carrier!"}), 1000);
       carrierTally++;
     };
 
@@ -1935,12 +1958,7 @@ computerCells.forEach((computerCell) => {
       setTimeout((()=>{console.log("YOU WON!")}), 100);
     }
 
-    let playerTotalTally = 0;
-    let playerPatrolBoatTally = 0;
-    let playerSubmarineTally = 0;
-    let playerDestroyerTally = 0;
-    let playerBattleshipTally = 0;
-    let playerCarrierTally = 0;
+    
 
     const overlay= document.querySelector(".overlay");
     overlay.classList.add("show");
@@ -1952,16 +1970,16 @@ computerCells.forEach((computerCell) => {
 
     function randomPlayerCode() {
       let playersXValue = randomNumBetween(1, 10);
-      console.log("players x value num= "+ playersXValue);
+      // console.log("players x value num= "+ playersXValue);
       let playersYValue = randomNumBetween(1, 10);
-      console.log("players y value num= "+ playersYValue);
+      // console.log("players y value num= "+ playersYValue);
       let playersXValueString= playersXValue.toString();
-      console.log("players x value str= "+ playersXValueString);
+      // console.log("players x value str= "+ playersXValueString);
       let playersYValueString= playersYValue.toString();
-      console.log("players y value str= "+ playersYValueString);
+      // console.log("players y value str= "+ playersYValueString);
       let playerCodeValue = playersXValueString + playersYValueString;
 
-      console.log(usedNumbers2.length);
+      // console.log(usedNumbers2.length);
 
       if (usedNumbers2.length===100){
         console.log("No more player spaces");
@@ -1969,10 +1987,10 @@ computerCells.forEach((computerCell) => {
       }
       if(!usedNumbers2.includes(playerCodeValue)){
         usedNumbers2.push(playerCodeValue);
-        console.log("players code= " + playerCodeValue);
+        // console.log("players code= " + playerCodeValue);
         return playerCodeValue;
       }else{
-        console.log("A coordinate has been repeated");
+        // console.log("A coordinate has been repeated");
         return randomPlayerCode();
       };
 
@@ -1988,15 +2006,12 @@ computerCells.forEach((computerCell) => {
     };
 
 
-    if(randomPlayerCode===null || randomPlayerCode===undefined){
-      console.log("getting closer to your bug");
-      console.log(randomPlayerCode());
-    }
-
 
     let computerAttack= document.querySelector(`[data-code= "${randomPlayerCode()}"]`);
     
     console.log(computerAttack);
+
+    // let scoreboardText= document.querySelector(".scoreboard-text");
 /////////////////////////////////////////////////
     if (computerAttack.getAttribute("class").includes("selected")) {
       computerAttack.classList.add("hit");
@@ -2005,41 +2020,60 @@ computerCells.forEach((computerCell) => {
       playerTotalTally++;
     }else{
       computerAttack.classList.add("missed");
+      // scoreboardText.textContent="Swing and a miss!";
+      setTimeout((()=>{scoreboardText.textContent="Computer attacked and missed!"}), 3000);
     }
 
     if(computerAttack.getAttribute("class").includes("player-patrol-boat") && playerPatrolBoatTally===1){
-      setTimeout((()=>{console.log("HIT! your Patrol Boat has been sank")}), 100);
-    }else if (computerAttack.getAttribute("class").includes("player-patrol-boat")){
+      // setTimeout((()=>{console.log("HIT! your Patrol Boat has been sank")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! your Patrol Boat has been sank";}), 3000);
+    }else if (computerAttack.getAttribute("class").includes("player-patrol-boat") && playerPatrolBoatTally < 1){
+      setTimeout((()=>{scoreboardText.textContent="Your Patrol Boat has been HIT!"}), 3000);
       playerPatrolBoatTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-submarine") && playerSubmarineTally===2){
-      setTimeout((()=>{console.log("HIT! your Submarine has been sank")}), 100);
-    }else if (computerAttack.getAttribute("class").includes("player-submarine")){
+      // setTimeout((()=>{console.log("HIT! your Submarine has been sank")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! your Submarine has been sank";}), 3000);
+    }else if (computerAttack.getAttribute("class").includes("player-submarine") && playerSubmarineTally < 2){
+      setTimeout((()=>{scoreboardText.textContent="Your Submarine has been HIT!"}), 3000);
       playerSubmarineTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-destroyer") && playerDestroyerTally===2){
-      setTimeout((()=>{console.log("HIT! your Destroyer has been sank")}), 100);
-    }else if (computerAttack.getAttribute("class").includes("player-destroyer")){
+      // setTimeout((()=>{console.log("HIT! your Destroyer has been sank")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! your Destroyer has been sank";}), 3000);
+    }else if (computerAttack.getAttribute("class").includes("player-destroyer") && playerDestroyerTally < 2){
+      setTimeout((()=>{scoreboardText.textContent="Your Destroyer has been HIT!"}), 3000);
       playerDestroyerTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-battleship") && playerBattleshipTally===3){
-      setTimeout((()=>{console.log("HIT! your Battleship has been sank")}), 100);
-    }else if (computerAttack.getAttribute("class").includes("player-battleship")) {
+      // setTimeout((()=>{console.log("HIT! your Battleship has been sank")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! the computer SUNK YOUR BATTLESHIP!";}), 3000);
+    }else if (computerAttack.getAttribute("class").includes("player-battleship") && playerBattleshipTally < 3) {
+      setTimeout((()=>{scoreboardText.textContent="Your Battleship has been HIT!"}), 3000);
       playerBattleshipTally++;
     };
 
     if(computerAttack.getAttribute("class").includes("player-carrier") && playerCarrierTally===4){
-      setTimeout((()=>{console.log("HIT! your Carrier has been sank")}), 100);
-    }else if (computerAttack.getAttribute("class").includes("player-carrier")) {
+      // setTimeout((()=>{console.log("HIT! your Carrier has been sank")}), 100);
+      setTimeout((()=>{scoreboardText.textContent = "HIT! your Carrier has been sank";}), 3000);
+    }else if (computerAttack.getAttribute("class").includes("player-carrier") && playerCarrierTally < 4) {
+      setTimeout((()=>{scoreboardText.textContent="Your Carrier has been HIT!"}), 3000);
       playerCarrierTally++;
     };
 
     if(playerTotalTally===17){
       setTimeout((()=>{console.log("You Lost!")}), 100);
     }
+
+    console.log("players Total tally= "+ playerTotalTally);
+    console.log("players patrol boat tally= "+ playerPatrolBoatTally);
+    console.log("players submarine tally= "+ playerSubmarineTally);
+    console.log("players destroyer tally= "+ playerDestroyerTally);
+    console.log("players battleship tally= "+ playerBattleshipTally);
+    console.log("players carrier tally= "+ playerCarrierTally);
 
 
 

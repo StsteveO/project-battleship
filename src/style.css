@@ -27,7 +27,7 @@ html {
     border: .25rem solid black;
     background-color: navy;
     color: silver;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 fieldset{
   display: flex;
@@ -140,7 +140,7 @@ th, td{
 .computer-cell-targeted{
   background-color: red;
   animation-name: computer-cell-targeted;
-  animation-duration: 200ms;
+  animation-duration: 250ms;
   animation-iteration-count: 11;
   animation-direction: alternate;
 }
@@ -151,14 +151,15 @@ th, td{
 .player-cell-targeted{
   background-color: red;
   animation-name: computer-cell-targeted;
-  animation-duration: 200ms;
+  animation-duration: 250ms;
   animation-iteration-count: 11;
   animation-direction: alternate;
 }
 .hit{
   background-color: red;
   text-align: center;
-  transition-duration: 200ms;
+  /* transition-duration: 200ms; */
+  transition-delay: 1000ms;
 }
 .missed{
   background-color: gray;
@@ -178,3 +179,27 @@ th, td{
   opacity: 1;
   pointer-events: all;
 }
+.scoreboard-title{
+  margin-left: 1rem;
+  margin-right: .25rem;
+}
+.scoreboard-display{
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0rem;
+  background-color: red;
+  margin-bottom: 1rem;
+  /* From https://css.glass */
+background: rgba(245, 246, 255, 0.19);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14.1px);
+-webkit-backdrop-filter: blur(14.1px);
+border: 1px solid rgba(245, 246, 255, 0.17);
+z-index: 1;
+}
+/* .scoreboard-text{
+  transition-duration: 5000ms;
+} */
