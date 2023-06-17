@@ -18,7 +18,13 @@ nameSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
   let name = e.composedPath()[0][1].value;
   namePlate.textContent = name;
+  nameSubmit.classList.add("hide");
 });
+
+const boatSelectionSection= document.querySelector(".boat-selection");
+const boatOrientationSection= document.querySelector(".boat-orientation");
+
+const computerSection = document.querySelector(".computer-grid");
 
 const grid = document.querySelector(".grid");
 
@@ -1259,6 +1265,13 @@ cells.forEach((cell) =>
         nextCell2_horizantal.classList.add("selected");
         nextCell2_horizantal.classList.add("player-patrol-boat");
       }
+      if ((patrolBoat.disabled === true)&&(submarine.disabled === true)&&(destroyer.disabled === true)&&(battleship.disabled === true)&&(carrier.disabled === true)) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
+      };
     }
 
     if (
@@ -1276,6 +1289,19 @@ cells.forEach((cell) =>
         cell.classList.add("player-patrol-boat");
         nextCell2_vertical.classList.add("selected");
         nextCell2_vertical.classList.add("player-patrol-boat");
+      }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
       }
     }
 
@@ -1297,6 +1323,19 @@ cells.forEach((cell) =>
         nextCell2_horizantal.classList.add("player-submarine");
         nextCell3_horizantal.classList.add("selected");
         nextCell3_horizantal.classList.add("player-submarine");
+      }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
       }
     }
 
@@ -1320,6 +1359,19 @@ cells.forEach((cell) =>
         nextCell3_vertical.classList.add("selected");
         nextCell3_vertical.classList.add("player-submarine");
       }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
+      }
     }
 
     if (
@@ -1341,6 +1393,19 @@ cells.forEach((cell) =>
         nextCell3_horizantal.classList.add("selected");
         nextCell3_horizantal.classList.add("player-destroyer");
       }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
+      }
     }
 
     if (
@@ -1361,6 +1426,19 @@ cells.forEach((cell) =>
         nextCell2_vertical.classList.add("player-destroyer");
         nextCell3_vertical.classList.add("selected");
         nextCell3_vertical.classList.add("player-destroyer");
+      }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
       }
     }
 
@@ -1387,6 +1465,19 @@ cells.forEach((cell) =>
         nextCell4_horizantal.classList.add("selected");
         nextCell4_horizantal.classList.add("player-battleship");
       }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
+      }
     }
 
     if (
@@ -1411,6 +1502,19 @@ cells.forEach((cell) =>
         nextCell3_vertical.classList.add("player-battleship");
         nextCell4_vertical.classList.add("selected");
         nextCell4_vertical.classList.add("player-battleship");
+      }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
       }
     }
 
@@ -1439,6 +1543,19 @@ cells.forEach((cell) =>
         nextCell5_horizantal.classList.add("selected");
         nextCell5_horizantal.classList.add("player-carrier");
       }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
+      }
     }
 
     if (
@@ -1465,6 +1582,19 @@ cells.forEach((cell) =>
         nextCell4_vertical.classList.add("player-carrier");
         nextCell5_vertical.classList.add("selected");
         nextCell5_vertical.classList.add("player-carrier");
+      }
+      if (
+        patrolBoat.disabled === true &&
+        submarine.disabled === true &&
+        destroyer.disabled === true &&
+        battleship.disabled === true &&
+        carrier.disabled === true
+      ) {
+        console.log("all buttons have been clicked");
+        boatSelectionSection.classList.add("hide");
+        boatOrientationSection.classList.add("hide");
+        tableClass.classList.add("inactive");
+        computerSection.classList.remove("hide");
       }
 
       if (

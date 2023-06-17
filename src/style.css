@@ -205,4 +205,13 @@ z-index: 1;
 } */
 .scoreboard-computer-text{
   margin-left: 2rem;
-};
+}
+.hide{
+  pointer-events: none;
+  transform: scale(0);
+  transition: 100ms;
+  position: absolute;
+}
+.inactive{
+  pointer-events: none;
+}
