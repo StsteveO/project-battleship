@@ -141,7 +141,7 @@ th, td{
   background-color: red;
   animation-name: computer-cell-targeted;
   animation-duration: 250ms;
-  animation-iteration-count: 11;
+  animation-iteration-count: 8;
   animation-direction: alternate;
 }
 @keyframes computer-cell-targeted{
@@ -152,14 +152,14 @@ th, td{
   background-color: red;
   animation-name: computer-cell-targeted;
   animation-duration: 250ms;
-  animation-iteration-count: 11;
+  animation-iteration-count: 8;
   animation-direction: alternate;
 }
 .hit{
   background-color: red;
   text-align: center;
   /* transition-duration: 200ms; */
-  transition-delay: 1000ms;
+  /* transition-delay: 1000ms; */
 }
 .missed{
   background-color: gray;
@@ -203,3 +203,6 @@ z-index: 1;
 /* .scoreboard-text{
   transition-duration: 5000ms;
 } */
+.scoreboard-computer-text{
+  margin-left: 2rem;
+};
