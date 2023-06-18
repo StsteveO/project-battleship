@@ -5,9 +5,10 @@
 }
 body,
 html {
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   /* background-color: skyblue; */
+  background-image: linear-gradient(to right bottom, #b4b5b5, #b2c0c4, #b2cad8, #bcd1ed, #d0d6ff);
 }
 :root {
   /* --custom-name: value; */
@@ -129,9 +130,8 @@ th, td{
   background-color: black;
 }
 .computer-selected{
-  background-color: black;
-  color: white;
-  /* opacity: 30%; */
+  /* background-color: white; */
+  opacity: 100%;
 }
 .computer-clicked{
   background-color: orange;
@@ -170,7 +170,7 @@ th, td{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
   opacity: 0;
   transition: 200ms;
@@ -185,6 +185,7 @@ th, td{
 }
 .scoreboard-display{
   display: flex;
+  justify-content: space-around;
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: sticky;
@@ -208,10 +209,77 @@ z-index: 1;
 }
 .hide{
   pointer-events: none;
-  transform: scale(0);
-  transition: 100ms;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0%;
+  transition: 250ms;
+  transition-property: opacity;
 }
 .inactive{
+  pointer-events: none;
+}
+
+.overlay-for-results{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.overlay-for-results.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.win-banner,
+.lose-banner{
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: auto;
+  padding: 1rem;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.win-banner.active,
+.lose-banner.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.win-banner{
+  background-color: lightblue;
+}
+.lose-banner{
+  background-color: rgb(255, 86, 86);
+}
+.congrats,
+.you-lost{
+  font-size: 3rem;
+}
+.you-won, 
+.better-luck{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+button{
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.small{
+  transform: scale(0);
   pointer-events: none;
 }

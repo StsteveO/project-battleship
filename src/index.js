@@ -14,19 +14,42 @@ let scoreboardComputerText = document.querySelector(".scoreboard-computer-text")
 const namePlate = document.querySelector(".name-plate");
 const nameSubmit = document.querySelector(".form.player-name");
 
+const boatSelectionSection = document.querySelector(".boat-selection");
+const boatOrientationSection = document.querySelector(".boat-orientation");
+const computerSection = document.querySelector(".computer-grid");
+computerSection.classList.add("small");
+const grid = document.querySelector(".grid");
+
+
 nameSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
   let name = e.composedPath()[0][1].value;
   namePlate.textContent = name;
   nameSubmit.classList.add("hide");
+  boatSelectionSection.classList.remove("hide");
+  boatOrientationSection.classList.remove("hide");
+  grid.classList.remove("hide");
+  scoreboardText.textContent="Pick your boat, and boat orientation. Then place it on your grid."
 });
 
-const boatSelectionSection= document.querySelector(".boat-selection");
-const boatOrientationSection= document.querySelector(".boat-orientation");
 
-const computerSection = document.querySelector(".computer-grid");
 
-const grid = document.querySelector(".grid");
+let overlayForResults = document.querySelector(".overlay-for-results");
+let winBanner = document.querySelector(".win-banner");
+let loseBanner = document.querySelector(".lose-banner");
+
+function win(){
+  overlayForResults.classList.add("active");
+  winBanner.classList.add("active");
+  return;
+};
+
+function lose(){
+  overlayForResults.classList.add("active");
+  loseBanner.classList.add("active");
+  return;
+};
+
 
 grid.addEventListener("click", (e) => {
   const xValue = e.composedPath()[0].dataset.xValue;
@@ -1270,7 +1293,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       };
     }
 
@@ -1301,7 +1325,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1335,7 +1360,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1370,7 +1396,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1404,7 +1431,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1438,7 +1466,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1476,7 +1505,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1514,7 +1544,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent="ATTACK!";
       }
     }
 
@@ -1554,7 +1585,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
     }
 
@@ -1594,7 +1626,8 @@ cells.forEach((cell) =>
         boatSelectionSection.classList.add("hide");
         boatOrientationSection.classList.add("hide");
         tableClass.classList.add("inactive");
-        computerSection.classList.remove("hide");
+        computerSection.classList.remove("small");
+        scoreboardText.textContent = "ATTACK!";
       }
 
       if (
@@ -1674,7 +1707,7 @@ class ComputerBoat {
         let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("patrol-boat");
-        actualCell.textContent= "p";
+        // actualCell.textContent= "p";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("patrol-boat");
         usedNumbers.push(cellCode);
@@ -1701,7 +1734,7 @@ class ComputerBoat {
         let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("submarine");
-        actualCell.textContent= "s";
+        // actualCell.textContent= "s";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("submarine");
         actualNextCell3.classList.add("computer-selected");
@@ -1731,7 +1764,7 @@ class ComputerBoat {
         let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("destroyer");
-        actualCell.textContent= "d";
+        // actualCell.textContent= "d";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("destroyer");
         actualNextCell3.classList.add("computer-selected");
@@ -1765,7 +1798,7 @@ class ComputerBoat {
         let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("battleship");
-        actualCell.textContent= "b";
+        // actualCell.textContent= "b";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("battleship");
         actualNextCell3.classList.add("computer-selected");
@@ -1806,7 +1839,7 @@ class ComputerBoat {
         let actualNextCell5 = document.querySelector(`[data-computer-code= "${nextCell5Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("carrier");
-        actualCell.textContent= "c";
+        // actualCell.textContent= "c";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("carrier");
         actualNextCell3.classList.add("computer-selected");
@@ -1838,7 +1871,7 @@ class ComputerBoat {
         let actualNextCell2 = document.querySelector(`[data-computer-code= "${nextCell2Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("patrol-boat");
-        actualCell.textContent= "p";
+        // actualCell.textContent= "p";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("patrol-boat");
         usedNumbers.push(cellCode);
@@ -1865,7 +1898,7 @@ class ComputerBoat {
         let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("submarine");
-        actualCell.textContent= "s";
+        // actualCell.textContent= "s";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("submarine");
         actualNextCell3.classList.add("computer-selected");
@@ -1895,7 +1928,7 @@ class ComputerBoat {
         let actualNextCell3 = document.querySelector(`[data-computer-code= "${nextCell3Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("destroyer");
-        actualCell.textContent= "d";
+        // actualCell.textContent= "d";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("destroyer");
         actualNextCell3.classList.add("computer-selected");
@@ -1929,7 +1962,7 @@ class ComputerBoat {
         let actualNextCell4 = document.querySelector(`[data-computer-code= "${nextCell4Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("battleship");
-        actualCell.textContent= "b";
+        // actualCell.textContent= "b";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("battleship");
         actualNextCell3.classList.add("computer-selected");
@@ -1970,7 +2003,7 @@ class ComputerBoat {
         let actualNextCell5 = document.querySelector(`[data-computer-code= "${nextCell5Code}"]`);
         actualCell.classList.add("computer-selected");
         actualCell.classList.add("carrier");
-        actualCell.textContent= "c";
+        // actualCell.textContent= "c";
         actualNextCell2.classList.add("computer-selected");
         actualNextCell2.classList.add("carrier");
         actualNextCell3.classList.add("computer-selected");
@@ -2037,11 +2070,13 @@ computerCells.forEach((computerCell) => {
     computerCell.classList.add("computer-cell-targeted");
     if (computerCell.getAttribute("class").includes("computer-selected")) {
       computerCell.classList.add("hit");
+      computerCell.classList.add("inactive");
       // computerCell.textContent = "X";
       setTimeout((()=>{computerCell.textContent = "X"}), 2000);
       computerTotalTally++;
     }else{
       computerCell.classList.add("missed");
+      computerCell.classList.add("inactive");
       setTimeout((()=>{scoreboardText.textContent="You missed! No ships hit."}), 2000);
     }
 
@@ -2087,6 +2122,7 @@ computerCells.forEach((computerCell) => {
 
     if(computerTotalTally===17){
       setTimeout((()=>{console.log("YOU WON!")}), 2000);
+      setTimeout(win, 6000);
     }
 
     
@@ -2199,6 +2235,7 @@ computerCells.forEach((computerCell) => {
 
     if(playerTotalTally===17){
       setTimeout((()=>{console.log("You Lost!")}), 6000);
+      setTimeout(lose, 6000);
     }
 
     console.log("players Total tally= "+ playerTotalTally);
@@ -2216,6 +2253,20 @@ computerCells.forEach((computerCell) => {
     setTimeout((()=>{computerAttack.classList.add("player-cell-targeted");}), 4000);
 
     setTimeout((()=>{overlay.classList.remove("show");}), 6000);
+
+
+
+
+
+   
+
+    // overlayForResults.classList.add("active");
+    // winBanner.classList.add("active");
+    // return;
+
+    // overlayForResults.classList.add("active");
+    // loseBanner.classList.add("active");
+    // return;
 
 
   });

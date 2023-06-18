@@ -10,8 +10,8 @@
     <h1 class="header">BATTLESHIP PROJECT</h1>
 
     <div class="scoreboard-display">
-        <div class="scoreboard-title">SCOREBOARD:</div>
-        <div class="scoreboard-text">Enter your name. Then pick your boat and direction.</div>
+        <!-- <div class="scoreboard-title">SCOREBOARD:</div> -->
+        <div class="scoreboard-text">Enter your name.</div>
         <div class="scoreboard-computer-text"></div>
     </div>
 
@@ -31,7 +31,7 @@
         </form>
     </div>
 
-    <div class="boat-selection">
+    <div class="boat-selection hide">
         <div class="boat-selection-title">Boat Selection</div>
         <div class="boat-selection-btns">
             <button data-patrol-boat-spaces="2" class="patrol-boat-btn">Patrol Boat (2 spaces)</button>
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="boat-orientation">
+    <div class="boat-orientation hide">
         <div class="boat-orientation-title">Boat Orientation</div>
         <div class="boat-orientation-btns">
             <button data-boat-orientation="horizantal" class="horizantal-btn">Horizantal</button>
@@ -55,7 +55,7 @@
         <div class="scoreboard-text">test text</div>
     </div> -->
 
-    <div class="grid">
+    <div class="grid hide">
     <div class="name-plate"></div>
         <table class="table-class">
             <tr>
@@ -357,5 +357,16 @@
         </table>
     </div>
     <div class="overlay"></div>
+    <div class="overlay-for-results"></div>
+    <div class="win-banner">
+        <div class="congrats">Congratulations!</div>
+        <div class="you-won">You Won!</div>
+        <button onclick='window.location.reload()' class="new-game">New Game</button>
+    </div>
+    <div class="lose-banner">
+        <div class="you-lost">You Lost</div>
+        <div class="better-luck">Better Luck Next Time</div>
+        <button onclick='window.location.reload()' class="new-game">New Game</button>
+    </div>
 </body>
 </html>
