@@ -94,37 +94,37 @@ function boatOrientationButtonFunction(
 }
 
 patrolBoat.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.patrolBoatSpaces);
+  console.log(e.composedPath()[0].dataset.patrolBoatSpaces);
   boatSelectionButtonFunction(patrolBoat);
 });
 
 submarine.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.submarineSpaces);
+  console.log(e.composedPath()[0].dataset.submarineSpaces);
   boatSelectionButtonFunction(submarine);
 });
 
 destroyer.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.destroyerSpaces);
+  console.log(e.composedPath()[0].dataset.destroyerSpaces);
   boatSelectionButtonFunction(destroyer);
 });
 
 battleship.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.battleshipSpaces);
+  console.log(e.composedPath()[0].dataset.battleshipSpaces);
   boatSelectionButtonFunction(battleship);
 });
 
 carrier.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.carrierSpaces);
+  console.log(e.composedPath()[0].dataset.carrierSpaces);
   boatSelectionButtonFunction(carrier);
 });
 
 horizantal.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.boatOrientation);
+  console.log(e.composedPath()[0].dataset.boatOrientation);
   boatOrientationButtonFunction(horizantal);
 });
 
 vertical.addEventListener("click", (e) => {
-  console.log(e.path[0].dataset.boatOrientation);
+  console.log(e.composedPath()[0].dataset.boatOrientation);
   boatOrientationButtonFunction(vertical);
 });
 
