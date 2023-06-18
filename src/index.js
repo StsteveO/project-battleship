@@ -8,6 +8,12 @@ import {
 } from "../src/functions _&_tests/functions";
 import { exampleAdd } from "../src/DOM-interactions/DOM-interactions";
 
+
+// window.addEventListener("load", ()=>{
+// const loader = document.querySelector(".loader");
+// loader.classList.add("done-loading");
+// });
+
 let scoreboardText = document.querySelector(".scoreboard-text");
 let scoreboardComputerText = document.querySelector(".scoreboard-computer-text");
 

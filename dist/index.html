@@ -5,8 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Battleship</title>
+    <style>
+        body,
+        html{
+            margin: 0;
+            /* height: auto; */
+        } 
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: black;
+            /* background-image: linear-gradient(to right bottom, #b4b5b5, #b2c0c4, #b2cad8, #bcd1ed, #d0d6ff); */
+            /* margin-top: 0; */
+            /* height: 100%; */
+            /* width: 100%; */
+            z-index: 10;
+            pointer-events: all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .preloader-img{
+            position: absolute;
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+            width: 120px;
+            height: 120px;
+            border-left:  20px solid yellow;
+            border-right:  20px solid yellow;
+            border-top: 20px solid red;
+            border-bottom: 20px solid red;
+            border-radius: 50%;
+            z-index: 15;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        .remove{
+            opacity: 0%;
+            pointer-events: none;
+            visibility: hidden;
+        }
+    </style>
 <script defer src="main.js"></script></head>
-<body>
+<body onload="removePreloader()">
+
+    <div class="preloader">
+        <div class="preloader-img"></div>
+    </div>
+
+
     <h1 class="header">BATTLESHIP PROJECT</h1>
 
     <div class="scoreboard-display">
@@ -368,5 +422,12 @@
         <div class="better-luck">Better Luck Next Time</div>
         <button onclick='window.location.reload()' class="new-game">New Game</button>
     </div>
+
+    <script>
+        function removePreloader(){
+            const preloader= document.querySelector(".preloader");
+            preloader.classList.add("remove");
+        }
+    </script>
 </body>
 </html>
