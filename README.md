@@ -1,4 +1,4 @@
-Battleship
+# Battleship
 
 ### Technologies Used: 
 - Regular HTML, CSS, JS.
